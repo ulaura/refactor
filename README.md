@@ -2,16 +2,18 @@
 
 This simple app utilizes React Bootstrap and Highcharts to display a basic dashboard for a user who manages multiple hotels.
 
-Currently all the components are core code reside in the App.js component, and there is a lot of code repitition.
+Currently all the components and the core app code reside in the App.js component, and there is a lot of code repitition.
 
 Please fork this repo, and then: 
 - refactor and reorganize the files and folders to make the code more D.R.Y. (Don't Repeat Yourself).
 - Feel free to make any design changes to make the UI more enjoyable
 - Please update the hotel chart so that it's title includes the hotel ID number
 
-There is not right or wrong answer, just consider this a chance to take some "legacy" code and make it easier for the developer, as well as improve the reliability and presentation for the end user.
+There is no right or wrong answer, just consider this a chance to take some "legacy" code and make it easier for the developer, as well as improve the reliability and presentation for the end user.
 
 Thank you for your time!
+
+![Refactor App Screenshot](./src/refactor-app-screenshot.png)
 
 ## Getting Started with Create React App
 
