@@ -1,6 +1,7 @@
 import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
+import Form from 'react-bootstrap/Form'
 import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
 import React, { useState } from 'react'
@@ -55,12 +56,29 @@ const HotelCard = ({hotelName, hotelBrandId, id}) => {
       <Col sm={12} md={6} lg={4}>
         <Card className="hotelCard">
           <Card.Header>
-            <h3>{hotelName}</h3>
-            <Button size='sm' variant='primary' onClick={() => changeHotelColorPrimary(id)}>Primary Color</Button>
-            <Button size='sm' variant='secondary' onClick={() => changeHotelColorSecondary(id)}>Secondary Color</Button>
+            <Form className="form">
+              <Form.Label className="formLabel">Change Title Color</Form.Label>
+              <Form.Check
+                inline
+                defaultChecked
+                label="Primary"
+                name="group1"
+                type="radio"
+                id={`inline-radio-1`}
+                onChange={() => changeHotelColorPrimary(id)}
+              />
+              <Form.Check
+                inline
+                label="Secondary"
+                name="group1"
+                type="radio"
+                id={`inline-radio-2`}
+                onChange={() => changeHotelColorSecondary(id)}
+              />
+            </Form>
+            <h2 className={hotelColor[id].color}>{hotelName}</h2>
           </Card.Header>
-          <Card.Body className={hotelColor[id].color}>
-            <Card.Title>Welcome to the lovely {hotelName}!</Card.Title>
+          <Card.Body >
             <HighchartsReact
               highcharts={Highcharts}
               options={options}

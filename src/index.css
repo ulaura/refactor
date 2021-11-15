@@ -12,8 +12,12 @@ code {
     monospace;
 }
 
+.container {
+  margin-top: 1rem;
+}
+
 .header {
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   padding-left: 1rem;
 }
 
@@ -21,3 +25,16 @@ code {
   min-height: 100%;
 }
 
+.primaryButton {
+  margin-right: 1rem;
+}
+
+.form {
+  font-size: 15px;
+  margin-bottom: 1rem;
+}
+
+.formLabel {
+  display: block;
+  margin-bottom: 2rem;
+}

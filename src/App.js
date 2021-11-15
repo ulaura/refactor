@@ -30,7 +30,7 @@ function App() {
 
   return (
     <Container>
-      <p className="header">Welcome To Your Dashboard</p>
+      <p className="header">Welcome To Your Dashboard!</p>
       <Row>
         {hotels.map(hotel => (
           <HotelCard 
