@@ -5,7 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(#000000, #676769) !important;
+  background-color: #030303 !important;
+  background-image: url('checkered-pattern.png') !important;
 }
 
 code {
@@ -26,33 +27,39 @@ code {
 
 .container {
   margin-top: 1rem;
-  max-width: 1200px !important;
+  max-width: 1100px !important;
 }
 
 .pageHeader {
   padding-top: 1rem;
   padding-left: 1rem;
   margin-top: 1rem !important;
-  margin-bottom: 2rem !important;
+  margin-bottom: 1rem !important;
   color: white;
-  font-size: 18px;
+  font-size: 25px;
+  font-weight: 350 !important;
 }
 
 .cardHeader {
   height: 140px;
   background-color: #e2e2e2 !important;
   border-bottom: 0 !important;
-  border-radius: 8px 8px 0 0 !important;
+  border-radius: 3px 3px 0 0 !important;
 }
 
 .hotelCardWrapper {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
+
 
 .hotelCard {
   min-height: 100%;
   border: 1px solid #cfcfd3 !important;
-  border-radius: 8px !important;
+  border-radius: 2px !important;
+}
+
+.hotelCard:hover {
+  box-shadow: 0 0 18px #297fff !important;
 }
 
 .hotelName {
