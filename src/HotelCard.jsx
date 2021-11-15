@@ -10,7 +10,7 @@ const HotelCard = ({hotelName, hotelBrandId, id}) => {
   // puting the hotelColor state inside HotelCard
   // makes the color state change w/o re-rendering the entire app.
 
-  // The keys here MUST match the id's in the array hotels.
+  // The keys here MUST match the id's in the array hotels (eg, hotels[0].id). See hotels.js
   const [hotelColor, setHotelColor] = useState({
     0: {
       color: 'text-primary'
