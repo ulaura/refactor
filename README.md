@@ -1,5 +1,7 @@
 # Refactor Opportunity
 
+## My changes exist on this branch. Thanks for taking a look!
+
 This simple app utilizes React Bootstrap and Highcharts to display a basic dashboard for a user who manages multiple hotels.
 
 Currently all the components and the core app code reside in the App.js component, and there is a lot of code repitition.
