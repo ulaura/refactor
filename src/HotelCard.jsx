@@ -5,7 +5,7 @@ import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
 import React, { useState } from 'react'
   
-const HotelCard = ({hotelName, id}) => {
+const HotelCard = ({hotelName, hotelBrandId, id}) => {
   // puting the hotelColor state inside HotelCard
   // makes the color state change w/o re-rendering the entire app.
 
@@ -41,7 +41,7 @@ const HotelCard = ({hotelName, id}) => {
 
   const options = {
     title: {
-      text: 'My chart'
+      text: `Brand ID: ${hotelBrandId}`
     },
     series: [{
       data: [1, 2, 3]
@@ -52,10 +52,10 @@ const HotelCard = ({hotelName, id}) => {
 
   return (
     <React.Fragment>
-      <Col>
-        <Card>
+      <Col sm={12} md={6} lg={4}>
+        <Card className="hotelCard">
           <Card.Header>
-            {hotelName} 
+            <h3>{hotelName}</h3>
             <Button size='sm' variant='primary' onClick={() => changeHotelColorPrimary(id)}>Primary Color</Button>
             <Button size='sm' variant='secondary' onClick={() => changeHotelColorSecondary(id)}>Secondary Color</Button>
           </Card.Header>

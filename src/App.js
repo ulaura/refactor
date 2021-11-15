@@ -30,18 +30,18 @@ function App() {
 
   return (
     <Container>
-      <Card>
-        <Card.Header>Welcome To Your Dashboard</Card.Header>
-        <Row>
-          {hotels.map(hotel => (
-            <HotelCard 
-              key={hotel.id}
-              id={hotel.id}
-              hotelName={hotel.name}
-            />
-         ))}
-        </Row>
-      </Card>
+      <p className="header">Welcome To Your Dashboard</p>
+      <Row>
+        {hotels.map(hotel => (
+          <HotelCard 
+            key={hotel.id}
+            id={hotel.id}
+            hotelName={hotel.name}
+            hotelBrandId={hotel.brandId}
+          />
+        ))}
+      </Row>
+      
     </Container>
   );
 }
