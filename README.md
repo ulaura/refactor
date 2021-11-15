@@ -1,4 +1,8 @@
+
+
 # Refactor Opportunity
+
+## Please see my changes on the develop branch. Thank you!
 
 This simple app utilizes React Bootstrap and Highcharts to display a basic dashboard for a user who manages multiple hotels.
 
