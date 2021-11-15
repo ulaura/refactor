@@ -1,4 +1,3 @@
-import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import Form from 'react-bootstrap/Form'
@@ -13,32 +12,29 @@ const HotelCard = ({hotelName, hotelBrandId, id}) => {
   // The keys here MUST match the id's in the array hotels (eg, hotels[0].id). See hotels.js
   const [hotelColor, setHotelColor] = useState({
     0: {
-      color: 'text-primary'
+      color: '#0D6EFD'
     },
     1: {
-      color: 'text-primary'
+      color: '#0D6EFD'
     },
     2: {
-      color: 'text-primary'
+      color: '#0D6EFD'
     },
   });
-
 
   const changeHotelColorPrimary = (id) => {
     setHotelColor({
       ...hotelColor,
-      [id]: {color: 'text-primary'},
+      [id]: {color: '#0D6EFD'},
     });
   }
-
   
   const changeHotelColorSecondary = (id) => {
     setHotelColor({
       ...hotelColor,
-      [id]: {color: 'text-secondary'},
+      [id]: {color: '#333333'},
     });
   }
-
 
   const options = {
     title: {
@@ -49,13 +45,11 @@ const HotelCard = ({hotelName, hotelBrandId, id}) => {
     }]
   }
 
-
-
   return (
     <React.Fragment>
-      <Col sm={12} md={6} lg={4}>
+      <Col sm={12} md={12} lg={4} className="hotelCardWrapper">
         <Card className="hotelCard">
-          <Card.Header>
+          <Card.Header className="cardHeader">
             <Form className="form">
               <Form.Label className="formLabel">Change Title Color</Form.Label>
               <Form.Check
@@ -76,9 +70,9 @@ const HotelCard = ({hotelName, hotelBrandId, id}) => {
                 onChange={() => changeHotelColorSecondary(id)}
               />
             </Form>
-            <h2 className={hotelColor[id].color}>{hotelName}</h2>
+            <h2 className={`hotelName`} style={{color: hotelColor[id].color}}>{hotelName}</h2>
           </Card.Header>
-          <Card.Body >
+          <Card.Body>
             <HighchartsReact
               highcharts={Highcharts}
               options={options}

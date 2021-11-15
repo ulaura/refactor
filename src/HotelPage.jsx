@@ -1,6 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React, { useState } from 'react'
-import Card from 'react-bootstrap/Card'
+import React from 'react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import HotelCard from './HotelCard'
@@ -9,7 +8,7 @@ import hotels from './hotels';
 const HotelPage = () => {
   return (
     <Container>
-      <p className="header">Welcome To Your Dashboard!</p>
+      <p className="pageHeader">Welcome To Your Dashboard!</p>
       <Row>
         {hotels.map(hotel => (
           <HotelCard 
